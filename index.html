@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<!--
+  KH Projects – Unternehmenswebsite
+  Diese Seite präsentiert das fiktive Unternehmen KH Projects aus Bozen. Sie ist
+  zweisprachig (Deutsch &amp; Italienisch) aufgebaut und nutzt modernes HTML,
+  CSS und JavaScript ohne Abhängigkeiten von Server‑Frameworks. Das Layout
+  ist voll responsive und bietet eine klare Navigation, einen Hero‑Bereich,
+  Informationen über das Unternehmen, eine Leistungsübersicht, eine
+  Projektgalerie mit Filterfunktion sowie einen Kontaktbereich inklusive
+  interaktivem Kontaktformular und Google‑Maps‑Einbettung. Die Sprache kann
+  jederzeit über den Umschalter rechts in der Navigation geändert werden.
+-->
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="KH Projects – Immobilien und Projektentwicklung in Südtirol. Wir gestalten die Zukunft durch Neubau, Sanierung und Umnutzung von Immobilien.">
+  <title>KH Projects – Immobilien &amp; Projektentwicklung</title>
+  <!-- Google Fonts: Serif für Überschriften und Sans‑Serif für Fließtexte -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+  <!-- JavaScript -->
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="logo">
+      <!-- Minimalistisches Logo: Initialen KH mit Projektnamen -->
+      <span class="logo-initials">KH</span>
+      <span class="logo-text">Projects</span>
+    </div>
+    <ul class="nav-links">
+      <li>
+        <a href="#home">
+          <span class="lang-de">Startseite</span>
+          <span class="lang-it">Home</span>
+        </a>
+      </li>
+      <li>
+        <a href="#about">
+          <span class="lang-de">Über&nbsp;uns</span>
+          <span class="lang-it">Chi&nbsp;siamo</span>
+        </a>
+      </li>
+      <li>
+        <a href="#services">
+          <span class="lang-de">Leistungen</span>
+          <span class="lang-it">Servizi</span>
+        </a>
+      </li>
+      <li>
+        <a href="#projects">
+          <span class="lang-de">Projekte</span>
+          <span class="lang-it">Progetti</span>
+        </a>
+      </li>
+      <li>
+        <a href="#contact">
+          <span class="lang-de">Kontakt</span>
+          <span class="lang-it">Contatti</span>
+        </a>
+      </li>
+    </ul>
+    <!-- Sprachumschalter -->
+    <div class="language-switcher" aria-label="Sprache wählen">
+      <button type="button" class="lang-btn" data-lang="de" aria-label="Deutsch">DE</button>
+      <button type="button" class="lang-btn" data-lang="it" aria-label="Italiano">IT</button>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <header id="home" class="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <!-- Deutsche Variante -->
+      <div class="lang-de">
+        <h1>Zukunft gestalten.<br>Raum entwickeln.<br>Südtirol leben.</h1>
+        <button class="cta-button" data-i18n="cta_more" onclick="document.getElementById('about').scrollIntoView({behavior: 'smooth'});">Mehr erfahren</button>
+      </div>
+      <!-- Italienische Variante -->
+      <div class="lang-it">
+        <h1>Plasmare il futuro.<br>Sviluppare lo spazio.<br>Vivere l'Alto&nbsp;Adige.</h1>
+        <button class="cta-button" data-i18n="cta_more" onclick="document.getElementById('about').scrollIntoView({behavior: 'smooth'});">Scopri di più</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Über Uns / Chi siamo -->
+    <section id="about" class="section about">
+      <div class="container">
+        <h2 class="section-title">
+          <span class="lang-de">Über&nbsp;uns</span>
+          <span class="lang-it">Chi&nbsp;siamo</span>
+        </h2>
+        <div class="about-content">
+          <p class="lang-de">
+            KH&nbsp;Projects ist ein junges Immobilien- und Projektentwicklungsunternehmen aus Bozen. Unser Ziel ist es,
+            nachhaltige Lebensräume zu schaffen, die die Bedürfnisse von Menschen, Gemeinden und Investoren
+            miteinander verbinden. Wir konzentrieren uns auf innovative Neubauprojekte, die Sanierung und
+            Umnutzung bestehender Gebäude sowie die Erschließung neuer Baugrundstücke. Nachhaltigkeit,
+            regionale Verwurzelung und enge Partnerschaften mit lokalen Architekten und Gemeinden bilden die
+            Grundpfeiler unserer Vision.
+          </p>
+          <p class="lang-it">
+            KH&nbsp;Projects è una giovane società di sviluppo immobiliare con sede a Bolzano. Il nostro obiettivo è
+            creare spazi abitativi sostenibili che concilino le esigenze di persone, comuni e investitori. Ci
+            concentriamo su progetti innovativi di nuova costruzione, ristrutturazione e riconversione di edifici
+            esistenti, nonché sulla valorizzazione di nuovi terreni edificabili. Sostenibilità, radicamento
+            regionale e solide collaborazioni con architetti e comuni locali sono i pilastri della nostra visione.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Leistungen / Servizi -->
+    <section id="services" class="section services">
+      <div class="container">
+        <h2 class="section-title">
+          <span class="lang-de">Leistungen</span>
+          <span class="lang-it">Servizi</span>
+        </h2>
+        <div class="service-grid">
+          <!-- Immobilienprojekte -->
+          <div class="service-item">
+            <div class="service-icon">🏗️</div>
+            <h3>
+              <span class="lang-de">Immobilienprojekte</span>
+              <span class="lang-it">Progetti&nbsp;immobiliari</span>
+            </h3>
+            <p>
+              <span class="lang-de">Neubau, Sanierung und Umnutzung von Immobilien – wir entwickeln Projekte mit Blick auf Qualität und Nachhaltigkeit.</span>
+              <span class="lang-it">Nuove costruzioni, ristrutturazioni e riconversioni – sviluppiamo progetti con attenzione alla qualità e alla sostenibilità.</span>
+            </p>
+          </div>
+          <!-- Projektkoordination -->
+          <div class="service-item">
+            <div class="service-icon">📋</div>
+            <h3>
+              <span class="lang-de">Projektkoordination</span>
+              <span class="lang-it">Coordinamento&nbsp;progetti</span>
+            </h3>
+            <p>
+              <span class="lang-de">Ganzheitliche Koordination und Entwicklung vom Konzept bis zur Umsetzung.</span>
+              <span class="lang-it">Coordinamento e sviluppo integrato dal concept alla realizzazione.</span>
+            </p>
+          </div>
+          <!-- Standortanalysen -->
+          <div class="service-item">
+            <div class="service-icon">📍</div>
+            <h3>
+              <span class="lang-de">Standortanalysen</span>
+              <span class="lang-it">Analisi&nbsp;dei&nbsp;siti</span>
+            </h3>
+            <p>
+              <span class="lang-de">Fundierte Standortanalysen und Machbarkeitsstudien für sichere Investitionsentscheidungen.</span>
+              <span class="lang-it">Analisi del territorio e studi di fattibilità per decisioni d'investimento sicure.</span>
+            </p>
+          </div>
+          <!-- Ankauf & Entwicklung -->
+          <div class="service-item">
+            <div class="service-icon">🏢</div>
+            <h3>
+              <span class="lang-de">Ankauf &amp; Entwicklung</span>
+              <span class="lang-it">Acquisto e sviluppo</span>
+            </h3>
+            <p>
+              <span class="lang-de">Wir akquirieren Baugrundstücke und entwickeln sie zu hochwertigen Immobilienprojekten.</span>
+              <span class="lang-it">Acquistiamo terreni edificabili e li trasformiamo in progetti immobiliari di alta qualità.</span>
+            </p>
+          </div>
+          <!-- Partnerschaften -->
+          <div class="service-item">
+            <div class="service-icon">🤝</div>
+            <h3>
+              <span class="lang-de">Partnerschaften</span>
+              <span class="lang-it">Partnership</span>
+            </h3>
+            <p>
+              <span class="lang-de">Gemeinsam mit Architekten, Gemeinden und Investoren schaffen wir starke Netzwerke.</span>
+              <span class="lang-it">Insieme ad architetti, comuni e investitori costruiamo solide reti di collaborazione.</span>
+            </p>
+          </div>
+          <!-- Flexible Modelle -->
+          <div class="service-item">
+            <div class="service-icon">🧩</div>
+            <h3>
+              <span class="lang-de">Flexible Modelle</span>
+              <span class="lang-it">Modelli flessibili</span>
+            </h3>
+            <p>
+              <span class="lang-de">Wir bieten flexible Geschäftsmodelle für unterschiedlichste Anforderungen in Südtirol.</span>
+              <span class="lang-it">Offriamo modelli di business flessibili per soddisfare le più diverse esigenze in Alto Adige.</span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projekte / Progetti -->
+    <section id="projects" class="section projects">
+      <div class="container">
+        <h2 class="section-title">
+          <span class="lang-de">Projekte</span>
+          <span class="lang-it">Progetti</span>
+        </h2>
+        <!-- Filter Buttons -->
+        <div class="filter-buttons">
+          <button class="filter-btn active" data-filter="all">
+            <span class="lang-de">Alle</span>
+            <span class="lang-it">Tutti</span>
+          </button>
+          <button class="filter-btn" data-filter="planning">
+            <span class="lang-de">In Planung</span>
+            <span class="lang-it">In pianificazione</span>
+          </button>
+          <button class="filter-btn" data-filter="progress">
+            <span class="lang-de">In Umsetzung</span>
+            <span class="lang-it">In esecuzione</span>
+          </button>
+          <button class="filter-btn" data-filter="completed">
+            <span class="lang-de">Abgeschlossen</span>
+            <span class="lang-it">Completato</span>
+          </button>
+        </div>
+        <!-- Project Grid -->
+        <div class="project-grid">
+          <!-- Placeholder Projekt 1 -->
+          <div class="project-card planning">
+            <div class="project-image"><img src="images/project1.png" alt="Projekt 1"></div>
+            <div class="project-info">
+              <h3>Bozen – Zentrum</h3>
+              <span class="status">
+                <span class="lang-de">In Planung</span>
+                <span class="lang-it">In pianificazione</span>
+              </span>
+              <p>
+                <span class="lang-de">Neubau eines modernen Wohnkomplexes im Herzen von Bozen.</span>
+                <span class="lang-it">Nuova costruzione di un complesso residenziale nel cuore di Bolzano.</span>
+              </p>
+            </div>
+          </div>
+          <!-- Placeholder Projekt 2 -->
+          <div class="project-card progress">
+            <div class="project-image"><img src="images/project2.png" alt="Projekt 2"></div>
+            <div class="project-info">
+              <h3>Meran – Obermais</h3>
+              <span class="status">
+                <span class="lang-de">In Umsetzung</span>
+                <span class="lang-it">In esecuzione</span>
+              </span>
+              <p>
+                <span class="lang-de">Sanierung und Erweiterung eines historischen Gebäudes zur Mischnutzung.</span>
+                <span class="lang-it">Ristrutturazione e ampliamento di un edificio storico per uso misto.</span>
+              </p>
+            </div>
+          </div>
+          <!-- Placeholder Projekt 3 -->
+          <div class="project-card completed">
+            <div class="project-image"><img src="images/project3.png" alt="Projekt 3"></div>
+            <div class="project-info">
+              <h3>Brixen – Industriezone</h3>
+              <span class="status">
+                <span class="lang-de">Abgeschlossen</span>
+                <span class="lang-it">Completato</span>
+              </span>
+              <p>
+                <span class="lang-de">Umnutzung eines ehemaligen Industriegeländes in Büro- und Gewerbeflächen.</span>
+                <span class="lang-it">Riconversione di un ex sito industriale in spazi per uffici e commercio.</span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Kontakt / Contatti -->
+    <section id="contact" class="section contact">
+      <div class="container">
+        <h2 class="section-title">
+          <span class="lang-de">Kontakt</span>
+          <span class="lang-it">Contatti</span>
+        </h2>
+        <div class="contact-wrapper">
+          <!-- Kontaktinformationen und Formular -->
+          <div class="contact-info">
+            <h3>KH&nbsp;Projects</h3>
+            <p>Innsbruckerstraße&nbsp;25<br>39100&nbsp;Bozen (BZ), Südtirol&nbsp;– Italien</p>
+            <p><strong>E-Mail:</strong> <a href="mailto:info@khprojects.it">info@khprojects.it</a></p>
+            <p class="lang-de"><strong>Öffnungszeiten:</strong> Montag–Freitag 09:00–17:00 Uhr</p>
+            <p class="lang-it"><strong>Orari d’ufficio:</strong> lunedì–venerdì 09:00–17:00</p>
+          </div>
+          <!-- Kontaktformular -->
+          <div class="contact-form">
+            <form id="contactForm" onsubmit="event.preventDefault(); alert('Vielen Dank für Ihre Nachricht! Grazie per il vostro messaggio!'); this.reset();">
+              <div class="form-group">
+                <label for="name">
+                  <span class="lang-de">Name</span>
+                  <span class="lang-it">Nome</span>
+                </label>
+                <input type="text" id="name" name="name" required>
+              </div>
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+              </div>
+              <div class="form-group">
+                <label for="message">
+                  <span class="lang-de">Nachricht</span>
+                  <span class="lang-it">Messaggio</span>
+                </label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+              </div>
+              <button type="submit" class="submit-button">
+                <span class="lang-de">Senden</span>
+                <span class="lang-it">Invia</span>
+              </button>
+            </form>
+          </div>
+        </div>
+        <!-- Google Maps Einbettung -->
+        <div class="map-container">
+          <iframe title="KH&nbsp;Projects Standort" src="https://maps.google.com/maps?q=Innsbruckerstraße%2025%2C%2039100%20Bozen&t=&amp;z=15&amp;ie=UTF8&amp;iwloc=&amp;output=embed" style="border:0" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; <span id="currentYear"></span> KH&nbsp;Projects – Immobilien &amp; Projektentwicklung. <span class="lang-de">Alle Rechte vorbehalten.</span><span class="lang-it">Tutti i diritti riservati.</span></p>
+    </div>
+  </footer>
+
+</body>
+</html>
